@@ -183,6 +183,7 @@ ok      gostats 0.131s
 ```
 
 This shows that the test was a success and that our coefficient of regression values are the same as that from Python and R.
+
 Additionally, out benchmarking result shows that fitting the linear regression model on the Anscombe Quartet takes 0.131 seconds with our code. Running similar benchmarks on the Python and R codes shows the following graph (benchmark code for [Python](pythonbenchmark.py) and [R](Rbenchmark.R)):
 
 | Code Language  | Code efficiency (seconds) |
@@ -194,6 +195,9 @@ Additionally, out benchmarking result shows that fitting the linear regression m
 ## Recommendation
 
 While Go has a lot of utility in backend and database services, comparing the statistics package to other popular statistics languages, Go underperforms. It does provide accurate results for the model that we tested it on. However, in terms of ease of use and efficiency, Python and R are superior.
+
 The package we utilized for the statistical analysis was lacking in providing detailed information about the fit of the linear regression model, requiring additional functions to be implemented. In comparison, Python and R were both able to not only perform the linear regression fit in a very simple way, they required no additional code to provide a summary of the model including the coefficienct of regression.
+
 In terms of efficiency, there is a significant difference between Go and the other two languages. While the dataset we worked with was small in size, the ten-fold and hundred-fold efficiency increase with R and Python respectively means that scaling up to bigger datasets would prove difficult with Go, leading to losing the company a lot of time.
+
 Acknowledging the advantages of Go in certain areas, we still have to advise the company to consider other options when it comes to data analytics purposes. As much as accuracy is not a point of concern with Go, as it has obtained the same results as the other two languages, the execution time and ease of use as well as library availability make Go a non-preferred language for statistical analysis purposes.
